@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const ValidationComponent = (props) => {
-
-    return (
+const ValidationComponent = props => {
     
-    <h2>The lenght of the characters typed: <hr/> {props.length}</h2>)
+  let lengthMessage = "";  
+  lengthMessage = (props.length < 5) ? "Text too short" : "Text is long enough";
+
+  return (
+    <h2>
+      The length of the characters typed: {props.length}<hr /> {lengthMessage}
+    </h2>
+  );
 };
 
 export default ValidationComponent;
